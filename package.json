@@ -4,6 +4,7 @@
   "description": "Angular 2 DOJO for Zagalabs training program",
   "main": "index.js",
   "scripts": {
+    "postinstall": "npm install jspm@0.16.42 -g && jspm install",
     "start": "./node_modules/http-server/bin/http-server -o -p 8383"
   },
   "repository": {
@@ -21,16 +22,45 @@
   "homepage": "https://github.com/darthega/a2-dojo#readme",
   "devDependencies": {
     "http-server": "^0.9.0",
-    "jspm": "^0.16.42"
+    "jspm": "0.16.42"
   },
   "jspm": {
     "directories": {
       "baseURL": "public"
     },
+    "dependencies": {
+      "angular2": "npm:angular2@^2.0.0-beta.17",
+      "ts": "github:frankwallis/plugin-typescript@^5.0.9"
+    },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
       "babel-runtime": "npm:babel-runtime@^5.8.24",
       "core-js": "npm:core-js@^1.1.4"
+    },
+    "overrides": {
+      "npm:angular2@2.0.0-beta.17": {
+        "dependencies": {
+          "reflect-metadata": "npm:reflect-metadata@0.1.2",
+          "rxjs": "npm:rxjs@5.0.0-beta.9",
+          "zone.js": "npm:zone.js@0.6.12",
+          "es6-shim": "npm:es6-shim@0.35.0"
+        },
+        "peerDependencies": {
+          "reflect-metadata": "npm:reflect-metadata@0.1.2",
+          "rxjs": "npm:rxjs@5.0.0-beta.9",
+          "zone.js": "npm:zone.js@0.6.12",
+          "es6-shim": "npm:es6-shim@0.35.0"
+        },
+        "meta": {
+          "src/*.js": {
+            "deps": [
+              "reflect-metadata",
+              "zone.js",
+              "es6-shim"
+            ]
+          }
+        }
+      }
     }
   }
 }
