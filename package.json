@@ -1,0 +1,36 @@
+{
+  "name": "zaga-a2-dojo",
+  "version": "1.0.0",
+  "description": "Angular 2 DOJO for Zagalabs training program",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/http-server/bin/http-server -o -p 8383"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darthega/a2-dojo.git"
+  },
+  "keywords": [
+    "Zagalabs"
+  ],
+  "author": "Daniel Ortega",
+  "license": "UNLICENCED",
+  "bugs": {
+    "url": "https://github.com/darthega/a2-dojo/issues"
+  },
+  "homepage": "https://github.com/darthega/a2-dojo#readme",
+  "devDependencies": {
+    "http-server": "^0.9.0",
+    "jspm": "^0.16.42"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "public"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
+}
