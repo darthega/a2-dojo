@@ -28,6 +28,7 @@ System.config({
   },
 
   map: {
+  	"components": "app/components",
     "angular2": "npm:angular2@2.0.0-beta.17",
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",

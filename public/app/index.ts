@@ -1,3 +1,6 @@
-/**
- * Created by danielortega on 8/11/16.
- */
+import { bootstrap } from 'angular2/platform/browser';
+
+import { MainComponent } from 'components/main/main.component';
+
+
+bootstrap( MainComponent );
